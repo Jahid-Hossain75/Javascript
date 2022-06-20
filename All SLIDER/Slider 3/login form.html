@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Click Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylesheet login form.css" type="text/css">
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="image">
+            <img src="Picture/img1.jpg">
+            <img src="Picture/img2.png">
+            <img src="Picture/img3.png">
+            <img src="Picture/img4.jpg">
+            <img src="Picture/img5.jpeg">
+        </div>
+        <div onclick="side_slide(-1)" class="slide left">
+            <span><i class="fas fa-angle-left"></i></span>
+        </div>
+        <div onclick="side_slide(1)" class="slide right">
+            <span><i class="fas fa-angle-right"></i></span>
+        </div>
+        <div class="btm_slider">
+            <span onclick="btm_slide(1)"></span>
+            <span onclick="btm_slide(2)"></span>
+            <span onclick="btm_slide(3)"></span>
+            <span onclick="btm_slide(4)"></span>
+            <span onclick="btm_slide(5)"></span>
+        </div>
+    </div>
+    
+    <script src="javscript.js" type="text/javascript"></script>
+
+</body>
+</html>
