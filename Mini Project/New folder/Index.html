@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Button Click Image</title>
+	
+	<style type="text/css">
+	button{cursor: pointer;}
+		/**===********div_1**********===**/
+		.pera_style{
+			color: red;
+			font-weight: bold;
+			font-size: 2rem;
+			font-style: italic;
+		}
+		
+		/**===**********div_2*********===**/
+		#mybtn1,#mybtn2,#mybtn3{
+			width: 80px;
+			height: 35px;
+			border: 1px solid #222;
+			outline: none;
+		}
+		.animation{
+			background: #de4644;
+			color: #fff;
+		}
+		
+		/**===**********div_3*********===**/
+		.mybtn{
+			background: #de4644;
+			width: 80px;
+			height: 35px;
+			outline: none;
+			border: 1px solid #de4644;
+			color: #fff;
+		}
+		
+		
+	</style>
+	
+	
+</head>
+<body>
+	 
+	<!=====**** div_1 *****=====>
+	
+	<p id="peraid">This is a first pragraph</p>
+	<button onclick="addstyle()" type="button">Add Style</button>
+	<button onclick="removestyle()" type="button">Remove Style</button>
+	
+	<br/><br/><br/>
+	
+	<!=====**** div_2 *****=====>
+	
+	<button id="mybtn1" type="button">Button1</button>
+	<button id="mybtn2" type="button">Button2</button>
+	<button id="mybtn3" type="button">Button3</button>
+	
+	<br/><br/><br/>
+	
+	<!=====**** div_3 *****=====>
+	
+	<button class="mybtn a" type="button">a</button>
+	<button class="mybtn b" type="button">b</button>
+	<button class="mybtn c" type="button">c</button>
+	
+	<br/><br/><br/>
+	
+	<!=====**** div_4 *****=====>
+	
+	<canvas id="mycanvus" width="420px" height="300px"></canvas>
+	
+	<br/><br/>
+	
+	<!=====**** div_5 *****=====>
+	
+	<p>Enter a number between 5 to 10:</p>
+	<input type="number" id="numbertext" placeholder="Enter your number"/>
+	<button type="button" id="checkbtn">Check</button>
+	
+	<br/><br/><br/><br/>
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	//div_1***********.........
+		function addstyle(){
+			document.querySelector("#peraid").classList.add("pera_style");
+		}
+		function removestyle(){
+			document.querySelector("#peraid").classList.remove("pera_style");
+		};
+		
+		
+	//div_2**********.........
+		document.querySelector("#mybtn1").addEventListener("click",function(){
+			document.querySelector("#mybtn1").classList.add("animation");
+			document.querySelector("#mybtn2").classList.remove("animation");
+			document.querySelector("#mybtn3").classList.remove("animation");
+		});
+		document.querySelector("#mybtn2").addEventListener("click",function(){
+			document.querySelector("#mybtn1").classList.remove("animation");
+			document.querySelector("#mybtn2").classList.add("animation");
+			document.querySelector("#mybtn3").classList.remove("animation");
+		});
+		document.querySelector("#mybtn3").addEventListener("click",function(){
+			document.querySelector("#mybtn1").classList.remove("animation");
+			document.querySelector("#mybtn2").classList.remove("animation");
+			document.querySelector("#mybtn3").classList.add("animation");
+		});
+		
+		
+	//div_3************..........
+		for(var i=0; i<3; i++){
+			document.querySelectorAll(".mybtn")[i],addEventListener("click",function(){
+				var text = this.innerHTML;
+				console.log(text);
+				audioPlay(text)
+			})
+		};
+		
+		function audioPlay(text){
+			switch(text){
+				case "a":
+				var audio = new Audio("Adios/A1.mp3");
+				audio.play();
+				break;
+					
+				case "b":
+				var audio = new Audio("Adios/A2.mp3");
+				audio.play();
+				break;
+					
+				case "c":
+				var audio = new Audio("Adios/A3.mp3");
+				audio.play();
+				break;
+			}
+		};
+		
+		
+	//div_4***********...........
+		var c = document.getElementById("mycanvus");
+		var ctx = c.getContext("2d");
+		
+		ctx.lineWidth=3;
+		ctx.strokeStyle= "black";
+		ctx.strokeRect(10,10,380,280);
+		
+		ctx.fillStyle="green";
+		ctx.fillRect(12,12,376,276);
+		
+		var centerX = c.width/2;
+		var centerY = c.height/2;
+		
+		ctx.beginPath();
+		ctx.arc(centerX,centerY,80,0,2*Math.PI,false);
+		ctx.fillStyle="red";
+		ctx.fill();
+		ctx.stroke();
+		
+		
+	//div_5***********...........
+		
+		document.querySelector("#checkbtn").addEventListener("click",function(){
+			var num = document.querySelector("#numbertext").value;
+			
+			try{
+				if(num < 4){
+					throw "Input is too low";
+				}else if(num > 10){
+					throw "Input is too high";
+				}
+			}catch(errr){
+				document.write(errr);
+			}
+		});
+		
+		
+	//div_6***********...........
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	//div_1.1***********...........
+		var students =[
+			{ id: 101, name: 'Bejoy', gpa: 2.65 },
+			{ id: 102, name: 'Jahid', gpa: 3.55 },
+			{ id: 103, name: 'Rana', gpa: 2.85 },
+			{ id: 104, name: 'Shakib', gpa: 3.91 },
+			{ id: 105, name: 'Emamul', gpa: 2.55 },
+			{ id: 106, name: 'Emon', gpa: 3.85 },
+			{ id: 107, name: 'tamsh', gpa: 4.00 },
+			{ id: 108, name: 'eva', gpa: 3.78 },
+			{ id: 109, name: 'munni', gpa: 2.92 },
+		]
+		function studentNames(){
+			return students.filter((x)=> x.gpa>3).map((y)=> y.name);
+		};
+		document.write(studentNames());
+		document.write("<br /><br />");
+		
+		
+	//div_1.2***********...........
+		var numbers = [10,20,30,40,50];
+		numbers.forEach(function(k){
+			console.log(k);
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

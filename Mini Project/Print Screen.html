@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Print Screen</title>
+	
+	<style type="text/css">
+		button{
+			padding: 5px 8px;
+			background: #333;
+			color: #fff;
+			border: 2px solid #de4644;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	
+	<button type="button" id="windowopen">PRINT</button>
+	
+	<script type="text/javascript">
+		document.querySelector("#windowopen").addEventListener("click",function(){
+			var mywindow = window.open(null,"PRINT WINDOW","width=600px,height=500px,top=160px,left=350%");
+			mywindow.document.write("<h1 style='text-align:center;line-height:500px;'>Freelancer Jahid Web Devoloper</h1>");
+		});
+	</script>
+	
+	
+	
+</body>
+</html>

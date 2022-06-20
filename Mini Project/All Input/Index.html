@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript All Input</title>
+	
+	<style type="text/css">
+		button{cursor:pointer;}
+	</style>
+	
+	
+</head>
+<body>
+	 
+	<!====Celcius no=====>
+	<b>Input 1: </b><input type="number" id="text1" placeholder="Enter Fahrenheit no..."/>
+	<button onclick="run();" type="button">Celcius Convert</button>
+	 
+	<br/><br/>
+	 
+	<!====Fahrenheit no=====>
+	<b>Input 2: </b><input type="number" id="text2" placeholder="Enter Celcius no..."/>
+	<button onclick="run2();" type="button">Fahrenheit Convert</button>
+	 
+	<br/><br/>
+	 
+	<!====Kilometer no=====>
+	<b>Input 3: </b><input type="number" id="text3" placeholder="Enter Meter no..."/>
+	<button onclick="run3();" type="button">Kilometer Convert</button>
+	
+	<br/><br/>
+	 
+	<!====Meter no=====>
+	<b>Input 4: </b><input type="number" id="text4" placeholder="Enter kilometer no..."/>
+	<button onclick="run4();" type="button">Meter Convert</button>
+	
+	<br/><br/>
+	 
+	<!====Foot no=====>
+	<b>Input 5: </b><input type="number" id="text5" placeholder="Enter inch no..."/>
+	<button onclick="run5();" type="button">Foot Convert</button>
+	
+	<br/><br/>
+	 
+	<!====Inch no=====>
+	<b>Input 6: </b><input type="number" id="text6" placeholder="Enter foot no..."/>
+	<button onclick="run6();" type="button">Inch Convert</button>
+	
+	<br/><br/>
+	 
+	<!====Age=====>
+	<b>Input 7: </b><input type="number" id="text7" placeholder="Enter your age..."/>
+	<button onclick="run7();" type="button">Enter</button>
+	
+	<br/><br/>
+	 
+	<!====Age 2=====>
+	<b>Input 8: </b><input type="number" id="text8" placeholder="Enter your age..."/>
+	<button onclick="run8();" type="button">Login</button>
+	
+	<br/><br/>
+	 
+	<!====Roll Antry=====>
+	<b>Input 9: </b><input type="number" id="text9" placeholder="Enter your roll no..."/>
+	<button onclick="run9();" type="button">Search</button>
+	
+	<br/><br/>
+	 
+	<!====Confirm mag=====>
+	<b>Input 10: </b><button onclick="run10();" type="button">Click Here</button>
+	
+	<br/><br/>
+	 
+	<!====Confirm mag=====>
+	<b>Input 11: </b><button onclick="run11();" type="button">Click Prompt</button>
+	
+	<br/><br/>
+	 
+	<!====Roll Antry=====>
+	<b>Input 12: </b><textarea id="text12" cols="25" rows="3"></textarea>
+	<button onclick="run12();" type="button">Click Here</button>
+	
+	<br/><br/>
+	
+	<!====Roll Antry=====>
+	<b>Input 13: </b><div id="demo"></div>
+	<button onclick="run13();" type="button">Delete</button>
+	
+	<br/><br/>
+	
+	<!====Roll Antry=====>
+	<b>Input 14: </b><div id="demo1"></div>
+	<button onclick="run14();" type="button">Delete</button>
+	
+	
+	
+	<script type="text/javascript">
+		function run(){
+			var input=document.getElementById("text1").value;
+			var result=(input-32)*5/9;
+			alert(result+" C")
+		}
+		
+		function run2(){
+			var input=document.getElementById("text2").value;
+			var result=(input*9/5)+32;
+			alert(result+" F")
+		}
+		
+		function run3(){
+			var input=document.getElementById("text3").value;
+			var result=input/1000;
+			alert(result+" KM")
+		}
+		
+		function run4(){
+			var input=document.getElementById("text4").value;
+			var result=input* 1000;
+			alert(result+" M")
+		}
+		
+		function run5(){
+			var input=document.getElementById("text5").value;
+			var result=input* 12;
+			alert(result+" inch")
+		}
+		
+		function run6(){
+			var input=document.getElementById("text6").value;
+			var result=input/ 12;
+			alert(result+" foot")
+		}
+		
+		function run7(){
+			var input=document.getElementById("text7").value;
+			if(input>=60){
+				alert("you are very old");
+			}
+			else if(input>=45){
+				alert("you are old");
+			}
+			else if(input>=30){
+				alert("you are very Young");
+			}
+			else if(input>=18){
+				alert("you are Young");
+			}
+			else if(input>=10){
+				alert("you are Child");
+			}
+			else if(input>=4){
+				alert("you are Baby");
+			}
+			else{
+				alert("please enter valid age")
+			}
+		};
+		
+		function run8(){
+			var input=document.getElementById("text8").value;
+			if(input>=18 && input<=40){
+				alert("you are Eligible. Thank you");
+			}
+			else{
+				alert("you are Ineligible. Thank you");
+			}
+		};
+		
+		function run9(){
+			var input=document.getElementById("text9").value;
+			switch(input){
+				case'434575':document.write('<img src="Image/pic1.jpg" width="200px"/><br/>ID - 434575 <br /> NAME - MD JAhid Hossain <br /> ADDRESS - Jashore')
+				break;
+				
+				case'434528':document.write('<img src="Image/pic2.jpg" width="200px"/><br/>ID - 434528 <br /> NAME - Sanjida Akter Sweety <br /> ADDRESS - Jashore')
+				break;
+				
+				case'434554':document.write('<img src="Image/pic3.jpg" width="200px"/><br/>ID - 434554 <br /> NAME - MD Shakibul Hassan <br /> ADDRESS - Jhinaidah')
+				break;
+				
+				default: document.write("This is invalid Entry");
+			}
+		};
+		
+		function run10(){
+			var input=confirm("Do you like this youtube canel");
+			if (input){
+				window.open("https://www.youtube.com/channel/UCrHBeSs70ACcealQAUs04iA");
+			}else{
+				alert("Sorry Thank you")
+			}
+		};
+		
+		function run11(){
+			var input= prompt("Enter your name");
+			document.write("<h2>" +input+ "</h2>");
+		};
+		
+		function run12(){
+			var input=new Array()
+			for(var x=0;x<=2;x++){
+				input[x]=prompt("Enter the value");
+			}
+			document.getElementById("text12").innerHTML=input;
+		};
+		
+		var x = ["Computer","Mouse","Keyboard","Ram","Rom"];
+		document.getElementById("demo").innerHTML=x;
+		function run13(){
+			x.pop();
+			document.getElementById("demo").innerHTML=x;
+		};
+		
+		var x = ["Computer","Mouse","Keyboard","Ram","Rom"];
+		document.getElementById("demo1").innerHTML=x;
+		function run14(){
+			x.shift();
+			document.getElementById("demo1").innerHTML=x;
+		}
+		
+	</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

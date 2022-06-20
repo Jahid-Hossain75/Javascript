@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Listener</title>
+	
+	<style type="text/css">
+		
+	</style>
+	
+	
+</head>
+<body>
+	
+	<select id="countrys">
+		<option value="">Select Counery</option>
+		<option value="1">Bangladesh</option>
+		<option value="2">India</option>
+		<option value="3">USA</option>
+		<option value="4">Japan</option>
+		<option value="5">Dubai</option>
+	</select>
+	
+	<div id="selectnumber">
+		<h3>You have selected: <span></span></h3>
+	</div>
+	
+	
+	<script type="text/javascript">
+		document.querySelector("#countrys").addEventListener("change",function(){
+			document.querySelector("#selectnumber h3 span").innerHTML=this.value;
+		})
+	</script>
+	
+	
+	
+</body>

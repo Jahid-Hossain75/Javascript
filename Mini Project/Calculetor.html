@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Listener</title>
+	
+	<style type="text/css">
+		
+	</style>
+	
+	
+</head>
+<body>
+	
+	<div id="demo"></div>
+	
+	<script type="text/javascript">
+		function colnow(price,tax){
+			var myprice = price;
+			var devprice = myprice / 100;
+			var taxamount = tax;
+			var totaltax = devprice * taxamount;
+			var totalamount = totaltax + myprice;
+			
+			document.write(totalamount);
+		}
+		document.write("Total Price-A: ") + colnow(450,15);
+		document.write("<br />");
+		document.write("Total Price-B: ") + colnow(355,11);
+		document.write("<br />");
+		document.write("Total Price-C: ") + colnow(460,12);
+		document.write("<br />");
+		document.write("Total Price-D: ") + colnow(240,8);
+		document.write("<br />");
+		document.write("Total Price-E: ") + colnow(190,9);
+		document.write("<br />");
+		document.write("Total Price-F: ") + colnow(380,10);
+		document.write("<br />");
+		document.write("Total Price-G: ") + colnow(500,14);
+		
+	</script>
+	
+	
+	
+</body>

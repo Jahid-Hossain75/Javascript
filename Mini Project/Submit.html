@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript toggole</title>
+	
+	<style type="text/css">
+		#box{
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			background: #ddd;
+			padding: 70px 30px;
+			box-sizing: border-box;
+		}
+		
+		input{
+			padding: 5px;
+			outline: none;
+			border: 2px solid #de4644;
+			box-shadow: 0 0 2px 0 #de4644;
+			display: block;
+			margin-bottom: 7px;
+			width: 200px;
+		}
+		
+		input:focus,#submit:focus{
+			border: 2px solid green;
+			box-shadow: 0 0 2px 0 green;
+		}
+		
+		#submit{
+			padding: 5px 0px;
+			background: #222;
+			color: #fff;
+			border: 2px solid #de4644;
+			font-size: 17px;
+			cursor: pointer;
+			width: 110px;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	
+	<form onsubmit="return false;" method="GET" id="box">
+		<input type="email" id="email" name="email" placeholder="Inter your email" required/>
+		<input type="password" id="password" name="password" placeholder="Inter your password" required/>
+		<input type="submit" id="submit" name="sub"/>
+	</form>
+	
+	<script type="text/javascript">
+		document.querySelector("#box").addEventListener("submit",function(){
+			var pwd = document.querySelector("#password").value;
+			var countpwd = pwd.length;
+			if(countpwd <=7){
+				alert("Your password should be equal to 8 characters");
+			}
+			alert(pwd);
+		})
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

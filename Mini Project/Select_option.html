@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Listener</title>
+	
+	<style type="text/css">
+		
+	</style>
+	
+	
+</head>
+<body>
+	
+	<select id="countrys">
+		<option value="">Select Counery</option>
+		<option value="1">Bangladesh</option>
+		<option value="2">India</option>
+		<option value="3">USA</option>
+		<option value="4">Japan</option>
+		<option value="5">Dubai</option>
+	</select>
+	
+	<div id="selectnumber">
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+		document.querySelector("#countrys").addEventListener("change",function(){
+			var selectnumber = this.value;
+			if (selectnumber==1){
+				alert("You have selected Bangladesh!");
+				document.querySelector("#selectnumber").innerHTML = '<select id=""><option value="">Khulna</option><option value="">Jashore</option><option value="">Sathkhira</option><option value="">Jhinaidah</option></select>';
+			}else if (selectnumber==2){
+				alert("You have selected India!");
+			}else if (selectnumber==3){
+				alert("You have selected USA!");
+			}else if (selectnumber==4){
+				alert("You have selected Japan!");
+			}else if (selectnumber==5){
+				alert("You have selected Dubai!");
+			}
+		})
+	</script>
+	
+	
+	
+</body>

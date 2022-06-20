@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Listener</title>
+	
+	<style type="text/css">
+		input{
+			border: 2px solid #de4644;
+			font-size: 17px;
+			outline: none;
+			box-shadow: 0 0 3px 0px #de4644;
+			padding: 2px 5px;
+			color: green;
+		}
+		input:focus{border: 2px solid green; box-shadow: 0 0 3px 0px green;}
+	</style>
+	
+	
+</head>
+<body>
+	
+	<div id="demo">
+		<input type="text" id="myinput" placeholder="inter your password"/>
+		<h3></h3>
+	</div>
+	
+	<script type="text/javascript">
+		document.querySelector("#myinput").addEventListener("keyup",function(){
+			var inputpwd=this.value;
+			var mypwd="jhb4547";
+			
+			if(inputpwd==mypwd){
+				document.querySelector("#demo h3").innerHTML="<font color='green'>Password Matched</font>";
+			}else{
+				document.querySelector("#demo h3").innerHTML="<font color='#de4644'>Password not Matched</font>";
+			}
+		});
+	</script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript toggole</title>
+	
+	<style type="text/css">
+		button{
+			padding: 5px 12px;
+			background: #333;
+			color: #fff;
+			border: 2px solid #de4644;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		#demo{
+			width: 300px;
+			height: 200px;
+			background: #ddd;
+			text-align: center;
+			padding: 20px 10px;
+			box-sizing: border-box;
+			margin-top: 25px;
+			display: none;
+		}
+		#demo p{font-size: 18px;}
+		.mymenu{}
+		.showmenu{
+			display: block !important;
+			animation-name: menuanimetion !important;
+			animation-duretion: 1s !important;
+		}
+		@keyframes menuanimetion{
+			from{opacity:0}
+			to{opacity:1}
+		}
+	</style>
+	
+	
+</head>
+<body>
+	
+	<button type="button" id="click_btn">PRINT</button>
+	<div id="demo" class="mymenu">
+		<h1>MD. Jahid</h1>
+		<p>Md Jahid is a profesonal web devoloper</p>
+	</div>
+	
+	<script type="text/javascript">
+		document.querySelector("#click_btn").addEventListener("click",function(){
+			document.querySelector(".mymenu").classList.toggle("showmenu");
+		});
+	</script>
+	
+	
+	
+</body>
+</html>
