@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    max-width: 1800px;
+}
+body{
+    background: #de4644;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-size: 15px;
+}
+
+
+/****=============*****************
+navigation section start
+*****************=============****/
+.slide{
+    max-width: 700px;
+    border: 10px solid #29a8e2;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slide_item .item{
+    display: none;
+    position: relative;
+}
+
+.item img{
+    max-width: 100%;
+    display: block;
+    animation: zoom 1.2s ease;
+}
+
+@keyframes zoom{
+    0%{transform: scale(1.5); opacity: 0}
+    50%{transform: scale(1.5)}
+    100%{transform: scale(1); opacity: 1}
+}
+
+.item .caption{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.slide_item .item.active{
+    display: block;
+}
+
+.slide .nextbtn, .slide .prevbtn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #444;
+    top: 50%;
+    cursor: pointer;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.slide .nextbtn i, .slide .prevbtn i{
+    color: #fff;
+    font-size: 29px;
+    line-height: 40px;
+}
+
+.slide .nextbtn{
+    right: 20px;
+}
+
+.slide .prevbtn{
+    left: 20px;
+}
+
+.slide .nextbtn:hover,
+.slide .prevbtn:hover{
+    box-shadow: 0px 0px 10px black;
+    background-color: #29a8e2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
