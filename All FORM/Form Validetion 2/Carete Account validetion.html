@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylesheet carete validetion.css" type="text/css">
+    <link rel="stylesheet" href="Responcive carete validetion.css" type="text/css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div class="contaner">
+           <header>
+               <h1 class="label">Carete Account</h1>
+           </header>
+            <form action="from is saccsees" class="form" id="form" method="post" name="form" onsubmit="return validetion()">
+                
+                <div class="form_dontrols">
+                    <label for="#">User Name</label>
+                    <input type="text" name="username" placeholder="username" id="username">
+                    <span class="circle"><i class="fas fa-check-circle"></i></span>
+                    <span class="exclamation"><i class="fas fa-exclamation-circle"></i></span>
+                    <small class="user_error"></small>
+                </div>
+                
+                <div class="form_dontrols">
+                    <label for="#">Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email address" id="email">
+                    <span class="circle_2"><i class="fas fa-check-circle"></i></span>
+                    <span class="exclamation_2"><i class="fas fa-exclamation-circle"></i></span>
+                    <small class="email_error"></small>
+                </div>
+                
+                <div class="form_dontrols">
+                    <label for="#">Password</label>
+                    <input type="password" name="password" placeholder="password" id="password">
+                    <span class="eye"><i class="far fa-eye"></i></span>
+                    <span class="slash"><i class="far fa-eye-slash"></i></span>
+                    <small class="pass_error"></small>
+                </div>
+                <div class="form_dontrols">
+                    <label for="#">Confrom Password</label>
+                    <input type="password" name="password" placeholder="confrom password" id="con_password">
+                    <span class="circle_3"><i class="fas fa-check-circle"></i></span>
+                    <span class="exclamation_3"><i class="fas fa-exclamation-circle"></i></span>
+                    <small class="conpass_error"></small>
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="javscript.js" type="text/javascript"></script>
+</body>
+
+</html>

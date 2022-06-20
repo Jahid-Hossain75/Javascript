@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    max-width: 1800px;
+}
+
+body{
+    background: #fff;
+    font-size: 16px;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    background: #1daaa5;
+}
+
+.contaner{
+    width: 400px;
+    height: auto;
+    padding: 20px 25px;
+    text-align: center;
+    background: #dedede;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contaner .label{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px;
+    color: #130f40;
+}
+
+.login_form{
+    padding: 20px;
+}
+
+.login_form .font{
+    font-size: 20px;
+    color: #130f40;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.login_form input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid silver;
+    outline: none;
+    font-size: 17px;
+}
+
+.login_form .font_2{
+    margin-top: 10px;
+}
+
+.login_form button{
+    margin: 40px 0 0 0;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    background: #1daaa5;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.login_form button:hover{
+    background: #19938f;
+}
+
+.login_form .user_error,
+.login_form .email_error,
+.login_form .pass_error,
+.login_form .conpass_error,
+.login_form .phone_error{
+    text-align: left;
+    margin-top: 5px;
+    color: red;
+    font-size: 17px;
+    display: none;
+}
+
+.div_1,
+.div_2{
+    display: flex;
+    position: relative;
+}
+
+.div_1 span,
+.div_2 span{
+    line-height: 40px;
+    width: 40px;
+    color: #000;
+    position: absolute;
+    right: 2px;
+    color: #6b6b6b;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.div_1 .show_btn{
+    display: none;
+}
+
+.div_1 .show_btn2{
+    display: none;
+}
+
+.div_2 .show_btn3{
+    display: none;
+}
+
+.div_2 .show_btn4{
+    display: none
+}
+
+.password:valid ~ .show_btn{
+    display: block;
+}
+
+/*
+.con_password:valid ~ .show_btn3{
+    display: block;
+}
+*/
+
+
+
+
+
+
