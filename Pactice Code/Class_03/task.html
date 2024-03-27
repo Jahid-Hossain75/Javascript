@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Task</title>
+</head>
+<body>
+    
+    <script>
+        // Get user data
+        var firstName = prompt("Enter your First Name: ");
+        var lastName = prompt("Enter your last name: ");
+
+        // concatenation without using library function
+        var fullName = firstName + " " + lastName;
+        document.write("My Full name is: " + fullName);
+        document.write("<br><br>");
+
+        // total length of full name
+        document.write("Total length of full name: " + fullName.length);
+        document.write("<br><br>");
+
+        // convert full name into uppercase
+        document.write("Convert full name into Uppercase: " + fullName.toUpperCase());
+        document.write("<br><br>");
+
+        // Print the 2nd position from full name
+        document.write("Print the 2nd position from full name: " + fullName.charAt(2));
+    </script>
+</body>
+</html>
